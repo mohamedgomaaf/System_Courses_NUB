@@ -1,0 +1,1063 @@
+{
+	"info": {
+		"_postman_id": "a8a855a8-fec3-4db4-889f-d7759ed47f47",
+		"name": "nub-cs-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11729338",
+		"_collection_link": "https://toctive.postman.co/workspace/My-Workspace~a078f084-0f77-452f-8057-f55c99deb6e6/collection/31006570-a8a855a8-fec3-4db4-889f-d7759ed47f47?action=share&source=collection_link&creator=11729338"
+	},
+	"item": [
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Web Development\",\r\n    \"description\": \"Learn Web Development with Best Experts\",\r\n    \"imageUrl\": \"https://www.simplilearn.com/ice9/free_resources_article_thumb/is_web_development_good_career.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/categories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/categories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Category by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/categories/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "680c020ed8ec671f0eb473ad"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"updated category\",\r\n    \"description\": \"nimber one\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/categories/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "680c020ed8ec671f0eb473ad"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/categories/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "680c020ed8ec671f0eb473ad"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subcategories",
+			"item": [
+				{
+					"name": "Create Subcategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"name\": \"Typescript\",\r\n    \"description\": \"Master Typescript with 100 example\",\r\n    \"imageUrl\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Le_JrK_gKVIQcmBSKPefQ7sGYN7klPs8Ww&s\",\r\n    \"category\": \"68178c7d15df6f31f354d908\",\r\n    \"courses\": []\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/subcategories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"subcategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Subcategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/subcategories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"subcategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Subcategory by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/subcategories/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"subcategories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Subcategory",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/subcategories/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"subcategories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Subcategory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/subcategories/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"subcategories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "680d65321313a71124d1bb4b"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "Get All Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/courses?",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"courses"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						},
+						"description": "Get all courses with optional filters"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Course",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"444 Introduction to Artificial Intelligence\",\r\n  \"subtitle\": \"Build intelligent systems with Python\",\r\n  \"level\": \"Beginner\",\r\n  \"instructor\": \"68178cb215df6f31f354d911\",\r\n  \"subcategory\": \"68178c8c15df6f31f354d90b\",\r\n  \"language\": \"English\",\r\n  \"previewVideoLink\": \"https://www.youtube.com/watch?v=RvyCAdDmFaw\",\r\n  \"price\": 29.99,\r\n  \"whatWeWillLearn\": [\r\n    \"Understand the fundamentals of AI\",\r\n    \"Develop basic AI algorithms\",\r\n    \"Apply AI techniques to solve real-world problems\"\r\n  ],\r\n  \"description\": \"Get started with Artificial Intelligence! This course introduces the core concepts and techniques used in AI, with a focus on practical applications. Ideal for beginners with no prior AI experience.\",\r\n  \"cover\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-YB22HlqAlYxctbdAynhVO0WfzmBw5IVSQA&s\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/courses",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"courses"
+							]
+						},
+						"description": "Create a new course"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Course By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/courses/680e631ecf22147c3a4c9987",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"courses",
+								"680e631ecf22147c3a4c9987"
+							]
+						},
+						"description": "Get a specific course by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Course",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Complete Web Development Bootcamp xx1\",\r\n  \"subtitle\": \"Learn full-stack web development from scratch xx1\",\r\n  \"level\": \"Beginner\",\r\n  \"instructor\": \"680d2f98f4fb586b11c59958\", // replace with actual instructor ID\r\n  \"subcategory\": \"680d351d3cf75b492aa0b918\", // replace with actual subcategory ID\r\n  \"language\": \"Arabic\",\r\n  \"previewVideoLink\": \"https://example.com/preview-video\",\r\n  \"price\": 45,\r\n  \"whatWeWillLearn\": [\r\n    \"xx1\",\r\n    \"HTML & CSS fundamentals \",\r\n    \"JavaScript programming\",\r\n    \"Backend development with Node.js\",\r\n    \"Database design with MongoDB\"\r\n  ],\r\n  \"description\": \"A comprehensive course covering all aspects of web development xx1\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/courses/680d33e84bd54c7872b153f0",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"courses",
+								"680d33e84bd54c7872b153f0"
+							]
+						},
+						"description": "Update an existing course"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Course",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/courses/680c027cd8ec671f0eb473b0",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"courses",
+								"680c027cd8ec671f0eb473b0"
+							]
+						},
+						"description": "Delete a course"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Review",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/courses/{{courseId}}/reviews",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"courses",
+								"{{courseId}}",
+								"reviews"
+							]
+						},
+						"description": "Add a review to a course"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Featured Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/courses/featured",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"courses",
+								"featured"
+							]
+						},
+						"description": "Get featured courses"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Instructors",
+			"item": [
+				{
+					"name": "Get All Instructors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/instructors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"instructors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Instructor by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/instructors/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"instructors",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "Instructor ID"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Instructor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Dr. Alex Johnson\",\r\n  \"title\": \"Associate Professor of Software Development\",\r\n  \"description\": \"Dr. Johnson is a passionate educator and experienced software developer with over 10 years in the field. His expertise lies in full-stack development, database management, and agile methodologies. He holds a D.Sc. in Software Engineering from Stanford University.\",\r\n  \"courses\":[],\r\n  \"avatar\": \"https://e7.pngegg.com/pngimages/340/946/png-clipart-computer-icons-user-icon-design-user-profile.pnghttps://avatar.iran.liara.run/public\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/instructors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"instructors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Instructor",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Dr. Jane Smith update 1\",\r\n  \"title\": \"Senior Software Engineering Instructor update 1\",\r\n  \"description\": \"Dr. Smith is a seasoned software engineer with over 15 years of industry experience. She specializes in web development, cloud architecture, and holds a Ph.D. in Computer Science from MIT. update 1\",\r\n  \"courses\": [] \r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/instructors/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"instructors",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "680d0aa878250debc991c939",
+									"description": "Instructor ID"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Instructor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/instructors/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"instructors",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "680d0aa878250debc991c939",
+									"description": "Instructor ID"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lessons",
+			"item": [
+				{
+					"name": "Create Lesson",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Set up nextjs\",\r\n    \"isCompleted\": false,\r\n    \"section\": \"68125871d8cbf42b7f60eac3\",\r\n    \"videoLink\": \"https://www.youtube.com/watch?v=mCmwqhvsyUg\",\r\n    \"order\": 1,\r\n    \"time\": 250\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/lessons",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"lessons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Lessons by Section",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/lessons?section={{sectionId}}&isCompleted=false",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"lessons"
+							],
+							"query": [
+								{
+									"key": "section",
+									"value": "{{sectionId}}"
+								},
+								{
+									"key": "isCompleted",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Lesson by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/lessons/{{lessonId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"lessons",
+								"{{lessonId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Lesson",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/lessons/{{lessonId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"lessons",
+								"{{lessonId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Lesson",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/lessons/{{lessonId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"lessons",
+								"{{lessonId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sections",
+			"item": [
+				{
+					"name": "Create Section",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"build ecommerce project with typescript\",\r\n    \"course\":\"680e631ecf22147c3a4c9987\",\r\n    \"order\":2,\r\n    \"lessons\":[]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/sections",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"sections"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Sections by Course ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/sections?course=65f8d12345678901234567890",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"sections"
+							],
+							"query": [
+								{
+									"key": "course",
+									"value": "65f8d12345678901234567890"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Section by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/sections/680f08134bca57da6c13f5e9",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"sections",
+								"680f08134bca57da6c13f5e9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Section",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/sections/65f8d12345678901234567891",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"sections",
+								"65f8d12345678901234567891"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Section",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/sections/65f8d12345678901234567891",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"sections",
+								"65f8d12345678901234567891"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\",\n    \"email\": \"john@example.com\",\n    \"password\": \"password123\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						},
+						"description": "Register a new user"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"john@example.com\",\n    \"password\": \"password123\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						},
+						"description": "Login a user"
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"john@example.com\",\n    \"password\": \"password123\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/admin/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"admin",
+								"login"
+							]
+						},
+						"description": "Login a user"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current User",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/me",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Current User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"moo\",\r\n    \"lastName\":\"sameh\",\r\n    \"email\":\"example@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/me",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:5000",
+			"type": "string"
+		},
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:5000",
+			"type": "default"
+		}
+	]
+}
